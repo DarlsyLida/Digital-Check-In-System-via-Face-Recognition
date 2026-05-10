@@ -1,0 +1,13 @@
+{% extends "admin/sidebar.html" %} {% block content %}
+{% load static %}
+
+
+
+<h2>Face Recognition Attendance</h2>
+<form action="{% url 'face-recognition' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Mark Attendance with Face</button>
+</form>
+
+
+{% endblock content %}
